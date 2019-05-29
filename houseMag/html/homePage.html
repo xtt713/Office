@@ -1,0 +1,113 @@
+﻿<header id="navbar">
+    <img src="images/gh.png" style="height: 30px;" /><span>湖南省政府大院办公用房综合管理系统</span>
+    <button class="fr btn btn-danger" id="existLogin" ontouchstart="common.clickEvent('1')" onclick="common.clickEvent('1')"><i class="icon iconfont icon-zhuye"></i>主页</button>
+</header>
+<div id="content" style="background-color: #fff; padding-top: 5px; padding-bottom: 5px; height: 93vh;">
+
+    <div id="main_left" class="map-left  pa" style="background-color: #F5F5F5;">
+        <div id="output" class="output">
+            <div id="unitBox">
+                <div class="search-group">
+                    <input type="text" id="searchContent" placeholder="请输入单位名称" autocomplete="off" />
+                   <span id="clearSearch" title="清空"></span>
+                 <button id="searchUnit" title="搜索"></button>
+                </div>
+                <ul id="unitList" class="poilist"></ul>
+                <div class="paginationDiv">
+                    <ul id="pagination" class="pagination"></ul>
+                    <p>共<span class="totalNum"></span>页</p>
+                    <p>到第<input type="text" id="num" />页</p>
+                    <button id="getIndexData">确定</button>
+                </div>
+            </div>
+            <div id="unitDetail" class="unit-detail" style="display:none;">
+                <div id='getBack' class='get-back'><i class='icon-reply'></i>&nbsp;&nbsp;&nbsp;&nbsp;返回</div>
+                <ul class="nav nav-pills nav-pillsUnit" id="nav-pillsUnit">
+                    <li role="presentation" class="active"><a name="unitDetailInfo" href="#">详细信息</a></li>
+                    <li role="presentation"><a name="houseInfo" href="#">办公楼</a></li>
+                    <li role="presentation"><a name="otherHouseInfo" href="#">附属大楼</a></li>
+                </ul>
+           
+                <div id="unitDetailInfo">
+                    <div class='photoTitle'>相册</div>
+              
+                    <div class='c-line-top'></div>
+                 
+                    <ul id='unitImgList' class="unitImgList"></ul>
+                 
+                    <div class='c-line-top'></div>
+               
+                    <div class='unitNameDiv' style="font-weight: 700;font-size:14px;"></div><div class='c-line-top' "></div>
+                    <div style='text-indent:28px;height: 25vh;margin-top:2vh;line-height:2;' class='unit-info'></div>
+                    <button id='watchChart' style='float:right;'>查看房间类型</button>
+                </div>
+         
+                <div id="houseInfo" style="display:none;" class="house-div">
+
+                </div>
+           
+                <div id="otherHouseInfo" style="display:none;" class="otherHouse-div">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divCenter" style="border: 1px #cccccc solid; height: 100%;float:right;">
+        <div class="toggle-box" id="toggleBox">
+            <p id="toggle_button" class="toggle-button" title="收起侧边面板">
+                <span class="toggle-icon"></span>
+            </p>
+
+        </div>
+        <div style="height: 100%;">
+            <div id="DMapContiner" style="border: 1px #cccccc solid; height: 100%; z-index: 0;"></div>
+        </div>
+        <%-- <div id="leftDivHide" title="收起左栏"></div>--%>
+    </div>
+</div>
+<div class="img-lunbo" id="imgLunbo">
+    <div class="button return">返回</div>
+    <div class="img-lunbo-content">
+        <div class="swiper-wrapper" id="swiper_wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<div class="originImgDiv" id="originImgDiv">
+    <div class="button return">返回</div>
+    <div class="getOriginalImg" id="getOriginalImg">
+        <div id="originalImg" class="originalImg">
+            <h4></h4>
+            <div id="other_area_column"></div>
+        </div>
+    </div>
+</div>
+<div id="popBox" style="display:none;position:absolute;width:100vw;height:100vh;top:0;z-index:20;">
+    <div id="houseRBox" class="dn">
+        <img src="./images/close.png" class="close-img" id="closePopBox" />
+        <h3></h3>
+        <div id="svgImg"></div>
+    </div>
+    <div id="floorRBox" class="dn">
+        <img src="./images/close.png" class="close-img" id="closeHouseRBox" />
+        <h4></h4>
+        <div id="floorRaphael"></div>
+    </div>
+    <div id="roomRBox" class="dn">
+        <img src="./images/close.png" class="close-img" id="closeFloorRBox" />
+        <h4></h4>
+        <div id="roomRaphael">
+        </div>
+    </div>
+    <div id="roomInfoBox" class="dn" style="display:none;width:400px;height:200px;position:absolute;left:40%;top:40%;background-color:#F5F5F5">
+        <h4></h4>
+        <div id="roomInfoRaphael" style="color:#fff;">
+            <span style="text-align:right;">  房间号：</span><span class="roomCode" style="text-align:left;"></span>
+            <span style="text-align:right;">区域大小：</span><span class="roomSize" style="text-align:left;"></span>
+            <span style="text-align:right;">房间名称：</span><span class="roomName" style="text-align:left;"></span>
+            <span style="text-align:right;">房间用户：</span><span class="roomUser" style="text-align:left;"></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,221 @@
+﻿<div class="data-list col-lg-12">
+    <div id="personManage" class="person-manage">
+        <div class="search">
+            <div id="searchPersonGroup" class="search-group">
+                <input type='text' placeholder='请输入人名' id="personSearchText" />
+                <!--去除inline-block元素之间的间距 -->
+                <button class="btn-success" id="searchPerson"><img src="images/search.svg" />搜索</button>
+
+            </div>
+        </div>
+        <table id="Person-table-list" class="table table-bordered table-style">
+            <colgroup>
+                <col style="width: 60px;" />
+                <col />
+            </colgroup>
+            <thead class="table-head" id="table_head">
+                <tr>
+                    <th width="60px">序号</th>
+                    <th width="100px">姓名</th>
+                    <th width="100px">职位</th>
+                    <th width="120px">处室</th>
+                    <th width="110px">电话</th>
+                    <th width="170px">登录账户</th>
+                    <th width="170px">登录密码</th>
+                    <th width="250px">操作</th>
+                </tr>
+            </thead>
+            <tbody id="personDetailData"></tbody>
+
+        </table>
+        <div class="paginationDiv" id="paginationDiv1">
+            <div>
+                <ul id="pagination1" class="pagination"></ul>
+            </div>
+            <div>
+                共<span class="totalNum" id="totalNum1"></span>页
+                到第<input type="number" id="num1" style="display: inline-block" />页<button id="getIndexData1">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--详细信息id="detailMsg"-->
+<!-- 编辑弹出框 -->
+<div class="modals" id="modals">
+    <form class="col-lg-7">
+        <div class=" detail-msg-box">
+            <div id="detailMsg" class="detail-msg">
+                <div>
+                    <h4><span id="roomStatus">编辑</span><b class="red">(*为必填项)</b></h4>
+                    <img src="images/closeModal.png" width="30" height="30" />
+                </div>
+                <div class="room-message">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>姓名:</label>
+                            <input name="REALNAME" type="text" class="col-xs-10 col-lg-7" maxlength="30" placeholder="请输入人员姓名" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>性别:</label>
+                            <label>
+                                <input type="radio" name="SEX" value="0" class="ace is_radio" />
+                                <span class="lbl">男</span>
+                            </label>
+                            <label style="margin-left:30px">
+                                <input type="radio" name="SEX" value="1" class="ace is_radio">
+                                <span class="lbl">女</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>职位:</label>
+                            <select name="POSITION" data-placeholder="请选择" id="POSITION">
+                            </select>
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>处室:</label>
+                            <select name="DIVISION" data-placeholder="请选择" id="DIVISION"></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="width-8">&nbsp;</span>电话:</label>
+                            <input id="PPhone" name="MOBILE" type="text" class="col-xs-10 col-lg-7" oninput="if(value.length>20)value=value.slice(0,20)" placeholder="请输入电话号码" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>登录账户:</label>
+                            <input name="LoginUser" type="text" class="col-xs-10 col-lg-7" placeholder="登录账户" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>登录密码:</label>
+                            <input name="LoginPwd" type="text" class="col-xs-10 col-lg-7" placeholder="登录密码" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6" id="Authority">
+                            <label class="col-xs-12 col-lg-5"><span class="red width-8">*</span>权限:</label>
+                            <input type="checkbox" name="division" value="1" />办公用房展示
+                            <input type="checkbox" name="division" value="2" />权属管理<br/>
+                            <input type="checkbox" name="division" value="3" />配置管理
+                            <input type="checkbox" name="division" value="4" />维修管理
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button class="btn btn-success" id="submitEditPerson">确定</button>
+                        <button class="btn btn-success" id="submitAddPerson" style="display:none">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--<div class="col-lg-7">
+
+    <div class="widget-box" id="widgetbox" style="height:100%;">
+        <div class="row">
+            <h4 class="col-lg-12"><span id="Personstatus">编辑</span><b class="red">(*为必填项)</b></h4>
+        </div>
+
+        <div class="step-pane active" style="position:relative;">
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>姓名:</label>
+                <input name="REALNAME" type="text" class="col-lg-3 required" maxlength="8" placeholder="请输入人员姓名" />
+            </div>
+
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>性别:</label>
+                <label>
+                    <input type="radio" name="SEX" value="0" class="ace is_radio" />
+                    <span class="lbl">男</span>
+                </label>
+                <label style="margin-left:30px">
+                    <input type="radio" name="SEX" value="1" class="ace is_radio">
+                    <span class="lbl">女</span>
+                </label>
+            </div>
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>职位:</label>
+                <select name="POSITION" data-placeholder="请选择" id="POSITION">
+                    <option value="1">省级正职</option>
+                    <option value="2">省级副职</option>
+                    <option value="3">正厅级</option>
+                    <option value="4">副厅级</option>
+                    <option value="5">正处级</option>
+                    <option value="6">副处级</option>
+                    <option value="7">处级以下</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>处室:</label>
+                <select name="DIVISION" data-placeholder="请选择" id="DIVISION">
+                    <option value="Null">空</option>
+                    <option value="1">省领导</option>
+                    <option value="2">厅领导</option>
+                    <option value="3">文电处</option>
+                    <option value="4">会议处</option>
+                    <option value="5">综合处</option>
+                    <option value="6">秘书一处</option>
+                    <option value="7">秘书二处</option>
+                    <option value="8">秘书三处</option>
+                    <option value="9">秘书四处</option>
+                    <option value="10">秘书五处</option>
+                    <option value="11">秘书六处</option>
+                    <option value="12">秘书七处</option>
+                    <option value="13">督查室（省政府督查室）</option>
+                    <option value="14">建议提案办理处</option>
+                    <option value="15">应急管理与信息工作办公室</option>
+                    <option value="16">省政府政务公开与服务管理办公室</option>
+                    <option value="17">电子政务处</option>
+                    <option value="18">机关保卫处</option>
+                    <option value="19">行政事务管理办公室</option>
+                    <option value="20">人事处</option>
+                    <option value="21">离退处</option>
+                    <option value="22">机关党委</option>
+                    <option value="23">省纪委驻省政府办公厅纪检组</option>
+                    <option value="24">接待办公室</option>
+                    <option value="25">信息化建设与技术中心</option>
+                    <option value="26">湖南政报社</option>
+                    <option value="27">研究室办公室</option>
+                    <option value="28">研究室综合调研一处</option>
+                    <option value="29">研究室综合调研二处</option>
+                    <option value="30">研究室综合调研三处</option>
+                    <option value="31">机关服务中心</option>
+                    <option value="32">临聘人员</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>&nbsp;&nbsp;电话:</label>
+                <input id="PPhone" name="MOBILE" type="text" class="col-lg-3" oninput="if(value.length>20)value=value.slice(0,20)" placeholder="请输入电话号码" />
+            </div>
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>&nbsp;&nbsp;登录账户:</label>
+                <input name="LoginUser" type="text" class="col-lg-3" placeholder="登录账户" />
+            </div>
+            <div class="row">
+                <label class="col-lg-2"><span class="red width-8">*</span>&nbsp;&nbsp;登录密码:</label>
+                <input name="LoginPwd" type="text" class="col-lg-3" placeholder="登录密码" />
+            </div>
+            <div class="row" id="Authority">
+                <label class="col-lg-2"><span class="red width-8">*</span>权限:</label>
+                <input type="checkbox" name="division" value="1" />办公用房展示
+                <input type="checkbox" name="division" value="2" />权属管理
+                <input type="checkbox" name="division" value="3" />配置管理
+                <input type="checkbox" name="division" value="4" />维修管理
+            </div>
+        </div>
+        <div class="row-fluid wizard-actions">
+            <button class="btn btn-success" id="submitEditPerson">
+                确定
+                <i class="icon-ok icon-on-right"></i>
+            </button>
+        </div>
+        <div class="row-fluid wizard-actions">
+            <button class="btn btn-success" id="submitAddPerson" style="display:none">
+                确定
+                <i class="icon-ok icon-on-right"></i>
+            </button>
+        </div>
+    </div>
+
+</div>-->

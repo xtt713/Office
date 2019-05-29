@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DF08FF5-DA07-48EF-A7D5-8640550B0100}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>houseMag</RootNamespace>
+    <AssemblyName>houseMag</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\default1200.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\showRoom.css" />
+    <Content Include="html\homePage.html" />
+    <Content Include="html\showRoom.html" />
+    <Content Include="images\close.svg" />
+    <Content Include="images\delete.svg" />
+    <Content Include="images\return.svg" />
+    <Content Include="images\search.svg" />
+    <Content Include="font\iconfont.eot" />
+    <Content Include="font\iconfont.svg" />
+    <Content Include="font\iconfont.ttf" />
+    <Content Include="font\iconfont.woff" />
+    <Content Include="images\unit2.png" />
+    <Content Include="js\layer-v3.1.1\layer\layer.js" />
+    <Content Include="js\layer-v3.1.1\layer\mobile\layer.js" />
+    <Content Include="js\layer-v3.1.1\layer\mobile\need\layer.css" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\icon-ext.png" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\icon.png" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\layer.css" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\loading-0.gif" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\loading-1.gif" />
+    <Content Include="js\layer-v3.1.1\layer\theme\default\loading-2.gif" />
+    <Content Include="js\layer-v3.1.1\test.html" />
+    <Content Include="js\layer-v3.1.1\更新日志.txt" />
+    <Content Include="js\showRoom.js" />
+    <Content Include="js\showUnit.js" />
+    <Content Include="MapJS\cxy_drawEdit.js" />
+    <Content Include="MapJS\cxy_drawFloor.js" />
+    <Content Include="MapJS\cxy_drawRoom.js" />
+    <Content Include="MapJS\mapapi3.15.5.js" />
+    <Content Include="MapJS\MapDraw.js" />
+    <Content Include="OfficeRDisplay\Dispatch\Dispatch.html" />
+    <Content Include="OfficeRDisplay\Dispatch\PRDispatch.js" />
+    <Content Include="OfficeRDisplay\houseMag\HouseMag.html" />
+    <Content Include="OfficeRDisplay\houseMag\HouseMag.js" />
+    <Content Include="OfficeRDisplay\houseSubMag\housesubMag.html" />
+    <Content Include="OfficeRDisplay\houseSubMag\housesubMag.js" />
+    <Content Include="OfficeRDisplay\PersonMag\PersonMag.html" />
+    <Content Include="OfficeRDisplay\PersonMag\personMag.js" />
+    <Content Include="OfficeRDisplay\PRoomMag.css" />
+    <Content Include="OfficeRDisplay\PRoomMag.js" />
+    <Content Include="OfficeRDisplay\RoomMag\RoomMag.html" />
+    <Content Include="OfficeRDisplay\RoomMag\RoomMag.js" />
+    <Content Include="OfficeRDisplay\unitMag\unitMag.html" />
+    <Content Include="OfficeRDisplay\unitMag\unitMag.js" />
+    <Content Include="PermissionMag\HandlerPermission.ashx" />
+    <Content Include="Svr\HandlerOffice.ashx" />
+    <Content Include="OfficeRDisplay\unitMag\HandlerUnit.ashx" />
+    <Content Include="OfficeRDisplay\RoomMag\HandlerRoom.ashx" />
+    <Content Include="OfficeRDisplay\PersonMag\HandlerPerson.ashx" />
+    <Content Include="OfficeRDisplay\houseSubMag\HandlerHouseSub.ashx" />
+    <Content Include="OfficeRDisplay\houseMag\HandlerHouse.ashx" />
+    <Content Include="OfficeRDisplay\Dispatch\HandlerDispatch.ashx" />
+    <Content Include="OfficeRDisplay\HandlerData.ashx" />
+    <Content Include="js\layer-v3.1.1\文档\jquery下载.url" />
+    <Content Include="js\layer-v3.1.1\文档\layer官网.url" />
+    <Content Include="js\layer-v3.1.1\文档\layer文档.url" />
+    <Content Include="js\layer-v3.1.1\文档\layui社区.url" />
+    <Content Include="js\layer-v3.1.1\文档\获得layim.url" />
+    <None Include="Properties\PublishProfiles\houseMag.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigMag\configMag.css" />
+    <Content Include="ConfigMag\configMag.html" />
+    <Content Include="ConfigMag\configMag.js" />
+    <Content Include="css\default.css" />
+    <Content Include="css\default320.css" />
+    <Content Include="css\default768.css" />
+    <Content Include="css\home.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\public.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="home.html" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\579eac0cb7195.jpg" />
+    <Content Include="images\bgm.jpg" />
+    <Content Include="images\B_Y.png" />
+    <Content Include="images\B_Z.png" />
+    <Content Include="images\cbl.png" />
+    <Content Include="images\cbr.png" />
+    <Content Include="images\china2.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\closeModal.png" />
+    <Content Include="images\ctl.png" />
+    <Content Include="images\ctr.png" />
+    <Content Include="images\C_D.png" />
+    <Content Include="images\C_X.png" />
+    <Content Include="images\dalou\house1.jpg" />
+    <Content Include="images\dalou\house2.jpg" />
+    <Content Include="images\dalou\house3.jpg" />
+    <Content Include="images\dalou\house4.jpg" />
+    <Content Include="images\dalou\house5.jpg" />
+    <Content Include="images\dalou\house6.jpg" />
+    <Content Include="images\dalou\jifang1.jpg" />
+    <Content Include="images\dalou\wujingyingfang1.jpg" />
+    <Content Include="images\dalou\wuye.jpg" />
+    <Content Include="images\dalou\xinfangjiedaishi1.jpg" />
+    <Content Include="images\danwei\timg %282%29.jpg" />
+    <Content Include="images\danwei\unit20180323%282%29.jpg" />
+    <Content Include="images\danwei\unit20180323%283%29.jpg" />
+    <Content Include="images\danwei\unit20180323%284%29.jpg" />
+    <Content Include="images\danwei\unit5.jpg" />
+    <Content Include="images\danwei\unit6.jpg" />
+    <Content Include="images\fangjian4.jpg" />
+    <Content Include="images\fangjian\1.jpg" />
+    <Content Include="images\fangjian\20180423142759.jpg" />
+    <Content Include="images\fangjian\4.jpg" />
+    <Content Include="images\fangjian\bgm.jpg" />
+    <Content Include="images\fangjian\biandianshi1.jpg" />
+    <Content Include="images\fangjian\biandianshi2.jpg" />
+    <Content Include="images\fangjian\biandianshi3.jpg" />
+    <Content Include="images\fangjian\china2.png" />
+    <Content Include="images\fangjian\fangjian4.jpg" />
+    <Content Include="images\fangjian\gh.png" />
+    <Content Include="images\fangjian\img0.png" />
+    <Content Include="images\fangjian\img1.png" />
+    <Content Include="images\fangjian\img10.png" />
+    <Content Include="images\fangjian\img3.png" />
+    <Content Include="images\fangjian\img5.png" />
+    <Content Include="images\fangjian\img6.png" />
+    <Content Include="images\fangjian\jifang1.jpg" />
+    <Content Include="images\fangjian\jifang2.jpg" />
+    <Content Include="images\fangjian\jifang3.jpg" />
+    <Content Include="images\fangjian\kongtiaojifang1.jpg" />
+    <Content Include="images\fangjian\kongtiaojifang2.jpg" />
+    <Content Include="images\fangjian\kongtiaojifang3.jpg" />
+    <Content Include="images\fangjian\room0.jpg" />
+    <Content Include="images\fangjian\room1.jpg" />
+    <Content Include="images\fangjian\room10.jpg" />
+    <Content Include="images\fangjian\room11.jpg" />
+    <Content Include="images\fangjian\room12.jpg" />
+    <Content Include="images\fangjian\room13.jpg" />
+    <Content Include="images\fangjian\room14.jpg" />
+    <Content Include="images\fangjian\room15.jpg" />
+    <Content Include="images\fangjian\room16.jpg" />
+    <Content Include="images\fangjian\room17.jpg" />
+    <Content Include="images\fangjian\room18.jpg" />
+    <Content Include="images\fangjian\room19.jpg" />
+    <Content Include="images\fangjian\room2.jpg" />
+    <Content Include="images\fangjian\room20.jpg" />
+    <Content Include="images\fangjian\room21.jpg" />
+    <Content Include="images\fangjian\room22.jpg" />
+    <Content Include="images\fangjian\room23.jpg" />
+    <Content Include="images\fangjian\room24.jpg" />
+    <Content Include="images\fangjian\room25.jpg" />
+    <Content Include="images\fangjian\room26.jpg" />
+    <Content Include="images\fangjian\room27.jpg" />
+    <Content Include="images\fangjian\room28.jpg" />
+    <Content Include="images\fangjian\room29.jpg" />
+    <Content Include="images\fangjian\room3.jpg" />
+    <Content Include="images\fangjian\room30.jpg" />
+    <Content Include="images\fangjian\room31.jpg" />
+    <Content Include="images\fangjian\room32.jpg" />
+    <Content Include="images\fangjian\room4.jpg" />
+    <Content Include="images\fangjian\room5.jpg" />
+    <Content Include="images\fangjian\room6.jpg" />
+    <Content Include="images\fangjian\room7.jpg" />
+    <Content Include="images\fangjian\room8.jpg" />
+    <Content Include="images\fangjian\room9.jpg" />
+    <Content Include="images\fenqu\4.jpg" />
+    <Content Include="images\fenqu\bgm.jpg" />
+    <Content Include="images\fenqu\houseSUB1.jpg" />
+    <Content Include="images\fenqu\houseSUB10.jpg" />
+    <Content Include="images\fenqu\houseSUB11.jpg" />
+    <Content Include="images\fenqu\houseSUB12.jpg" />
+    <Content Include="images\fenqu\houseSUB13.jpg" />
+    <Content Include="images\fenqu\houseSUB14.jpg" />
+    <Content Include="images\fenqu\houseSUB15.jpg" />
+    <Content Include="images\fenqu\houseSUB16.jpg" />
+    <Content Include="images\fenqu\houseSUB2.jpg" />
+    <Content Include="images\fenqu\houseSUB3.jpg" />
+    <Content Include="images\fenqu\houseSUB4.jpg" />
+    <Content Include="images\fenqu\houseSUB5.jpg" />
+    <Content Include="images\fenqu\houseSUB6.png" />
+    <Content Include="images\fenqu\houseSUB7.jpg" />
+    <Content Include="images\fenqu\houseSUB8.jpg" />
+    <Content Include="images\fenqu\houseSUB8.png" />
+    <Content Include="images\fenqu\houseSUB9.jpg" />
+    <Content Include="images\gh.png" />
+    <Content Include="images\img0.png" />
+    <Content Include="images\img1.png" />
+    <Content Include="images\img10.png" />
+    <Content Include="images\img11.png" />
+    <Content Include="images\img2.png" />
+    <Content Include="images\img3.png" />
+    <Content Include="images\img4.png" />
+    <Content Include="images\img5.png" />
+    <Content Include="images\img6.png" />
+    <Content Include="images\img7.png" />
+    <Content Include="images\img8.png" />
+    <Content Include="images\img9.png" />
+    <Content Include="images\imgeryuan.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\NoImg.jpg" />
+    <Content Include="images\show_hidden.png" />
+    <Content Include="images\timg.jpg" />
+    <Content Include="images\wenjiantupian\buildImg1.jpg" />
+    <Content Include="images\wenjiantupian\buildImg2.jpg" />
+    <Content Include="images\wenjiantupian\buildImg3.jpg" />
+    <Content Include="images\wenjiantupian\buildImg4.jpg" />
+    <Content Include="images\wenjiantupian\buildImg5.jpg" />
+    <Content Include="images\wenjiantupian\buildImg6.jpg" />
+    <Content Include="images\wenjiantupian\buildImg7.jpg" />
+    <Content Include="images\wenjiantupian\buildImg8.jpg" />
+    <Content Include="images\wenjiantupian\buildImg9.jpg" />
+    <Content Include="js\common.js" />
+    <Content Include="js\login.js" />
+    <Content Include="login.html" />
+    <Content Include="MapJS\cxydrawM.js" />
+    <Content Include="MapJS\cxygooglemap.js" />
+    <Content Include="MapJS\gstatic\mapfiles\cb_scout_sprite_api_003.png" />
+    <Content Include="MapJS\gstatic\mapfiles\google_white.png" />
+    <Content Include="MapJS\gstatic\mapfiles\imgs8.png" />
+    <Content Include="MapJS\gstatic\mapfiles\mapcontrols3d7.png" />
+    <Content Include="MapJS\gstatic\mapfiles\marker_sprite.png" />
+    <Content Include="MapJS\gstatic\mapfiles\openhand_8_8.bmp" />
+    <Content Include="MapJS\gstatic\mapfiles\transparent.png" />
+    <Content Include="MapJS\image\卫星.png" />
+    <Content Include="MapJS\image\地图.png" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\common.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\controls.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\drawing.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\main.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\map.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\onion.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\overlay.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\stats.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\util.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\drawing.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\drawing_impl.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\geocoder.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\geometry.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\infowindow.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\kml.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\layers.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\marker.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\maxzoom.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\places_impl.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\poly.js" />
+    <Content Include="MapJS\mapfiles\api-3\15\5\新建文件夹\usage.js" />
+    <Content Include="MapJS\mapfiles\api-3\images\cb_scout2.png" />
+    <Content Include="MapJS\mapfiles\api-3\images\google_white2.png" />
+    <Content Include="MapJS\mapfiles\api-3\images\mapcnt3.png" />
+    <Content Include="MapJS\mapfiles\cb\mod_cb_scout\cb_scout_sprite_api_002.png" />
+    <Content Include="MapJS\mapfiles\cb\mod_cb_scout\cb_scout_sprite_api_003.png" />
+    <Content Include="MapJS\mapfiles\cb_scout_sprite_api_003.png" />
+    <Content Include="MapJS\mapfiles\closedhand_8_8.cur" />
+    <Content Include="MapJS\mapfiles\css\default.css" />
+    <Content Include="MapJS\mapfiles\drag_cross_67_16.png" />
+    <Content Include="MapJS\mapfiles\drawing.png" />
+    <Content Include="MapJS\mapfiles\google_white.png" />
+    <Content Include="MapJS\mapfiles\iphone-dialog-bg.png" />
+    <Content Include="MapJS\mapfiles\iphone-dialog-button.png" />
+    <Content Include="MapJS\mapfiles\iw3.png" />
+    <Content Include="MapJS\mapfiles\iws3.png" />
+    <Content Include="MapJS\mapfiles\iw_close.gif" />
+    <Content Include="MapJS\mapfiles\mapcontrols3d6.png" />
+    <Content Include="MapJS\mapfiles\mapcontrols3d7.png" />
+    <Content Include="MapJS\mapfiles\markers2\marker_sprite.png" />
+    <Content Include="MapJS\mapfiles\markers\marker_sprite.png" />
+    <Content Include="MapJS\mapfiles\mv\imgs8.png" />
+    <Content Include="MapJS\mapfiles\openhand_8_8.cur" />
+    <Content Include="MapJS\mapfiles\rotate.png" />
+    <Content Include="MapJS\mapfiles\rotate2.png" />
+    <Content Include="MapJS\mapfiles\szc3d.png" />
+    <Content Include="MapJS\mapfiles\szc4.png" />
+    <Content Include="MapJS\mapfiles\transparent.png" />
+    <Content Include="MapJS\mapfiles\undo_poly.png" />
+    <Content Include="MapJS\rapmin.js" />
+    <Content Include="PermissionMag\permissionManage.css" />
+    <Content Include="PermissionMag\permissionManage.html" />
+    <Content Include="PermissionMag\permissionManage.js" />
+    <Content Include="PRoomMag.html" />
+    <Content Include="Tools\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Tools\css\bootstrap-select.css" />
+    <Content Include="Tools\css\bootstrap.min.css" />
+    <Content Include="Tools\css\iconfont.css" />
+    <Content Include="Tools\css\jquery.orgchart.css" />
+    <Content Include="Tools\css\sweet-alert.css" />
+    <Content Include="Tools\js\ajaxfileupload.js" />
+    <Content Include="Tools\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Tools\js\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="Tools\js\bootstrap.min.js" />
+    <Content Include="Tools\js\drilldown.js" />
+    <Content Include="Tools\js\FSS.js" />
+    <Content Include="Tools\js\highcharts.js" />
+    <Content Include="Tools\js\jquery.min.js" />
+    <Content Include="Tools\js\pagination.js" />
+    <Content Include="Tools\js\photo-sphere-viewer.js" />
+    <Content Include="Tools\js\raphael.js" />
+    <Content Include="Tools\js\rapmin.js" />
+    <Content Include="Tools\js\sweet-alert.js" />
+    <Content Include="Tools\js\three.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\Dispatch\HandlerDispatch.ashx.cs">
+      <DependentUpon>HandlerDispatch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\HandlerData.ashx.cs">
+      <DependentUpon>HandlerData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\houseMag\HandlerHouse.ashx.cs">
+      <DependentUpon>HandlerHouse.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\houseSubMag\HandlerHouseSub.ashx.cs">
+      <DependentUpon>HandlerHouseSub.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\PersonMag\HandlerPerson.ashx.cs">
+      <DependentUpon>HandlerPerson.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\RoomMag\HandlerRoom.ashx.cs">
+      <DependentUpon>HandlerRoom.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeRDisplay\unitMag\HandlerUnit.ashx.cs">
+      <DependentUpon>HandlerUnit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionMag\HandlerPermission.ashx.cs">
+      <DependentUpon>HandlerPermission.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Svr\HandlerOffice.ashx.cs">
+      <DependentUpon>HandlerOffice.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MapJS\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{6f7a82e3-0807-4961-8724-81c095ebd5ee}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4997</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4997/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

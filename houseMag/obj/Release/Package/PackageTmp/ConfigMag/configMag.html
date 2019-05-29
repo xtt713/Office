@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>湖南省政府大院公有房产综合管理系统配置管理</title>
+    <link rel="stylesheet" href="../tool/css/bootstrap.css">
+    <link rel="stylesheet" href="../tool/css/iconfont.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="configMag.css">
+    <script src="../tool/js/jquery.js"></script>
+    <script src="../tool/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="head-title">
+        湖南省政府大院公有房产综合管理系统——配置管理
+        <button class="fr btn btn-danger" id="existLogin" onclick="common.clickEvent('3')"><i class="icon iconfont icon-zhuye"></i>主页</button>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5">
+                <table class="table t-center  table-bordered" id="applyList">
+                    <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>创建时间</th>
+                            <th>处室</th>
+                            <th>创建者</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr step="2">
+                            <td>xx处室调配申请</td>
+                            <td>2018-04-21 09:00</td>
+                            <td>xx处</td>
+                            <td>xx华</td>
+                            <td>处室主管批示</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="1">
+                            <td>xx处室添加人员申请</td>
+                            <td>2018-04-21 10:00</td>
+                            <td>xx处</td>
+                            <td>xx魄</td>
+                            <td>处室申请</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="4">
+                            <td>xx处室移交人员申请</td>
+                            <td>2018-04-21 11:00</td>
+                            <td>xx处</td>
+                            <td>xx会</td>
+                            <td>方案提交</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="2">
+                            <td>xx处室调配申请</td>
+                            <td>2018-04-21 09:00</td>
+                            <td>xx处</td>
+                            <td>xx华</td>
+                            <td>处室主管批示</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="2">
+                            <td>xx处室调配申请</td>
+                            <td>2018-04-21 09:00</td>
+                            <td>xx处</td>
+                            <td>xx华</td>
+                            <td>处室主管批示</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="6">
+                            <td>xx处室调配申请</td>
+                            <td>2018-04-21 09:00</td>
+                            <td>xx处</td>
+                            <td>xx华</td>
+                            <td>调配通知</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                        <tr step="7">
+                            <td>xx处室调配申请</td>
+                            <td>2018-04-21 09:00</td>
+                            <td>xx处</td>
+                            <td>xx华</td>
+                            <td>签章合同</td>
+                            <td>
+                                <button class="btn btn-info">修改</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-7 apply-flow" id="applyFlow">
+                <ul>
+                    <li>
+                        <span>1</span>
+                        <span>处室申请</span>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <span>处室主管批示</span>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <span>厅管申请</span>
+                    </li>
+                    <li>
+                        <span>4</span>
+                        <span>方案提交</span>
+                    </li>
+                    <li>
+                        <span>5</span>
+                        <span>主管批示</span>
+                    </li>
+                    <li>
+                        <span>6</span>
+                        <span>调配通知</span>
+                    </li>
+                    <li>
+                        <span>7</span>
+                        <span>签章合同</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-7 apply-box">
+                <div class="apply-table" id="applyTable">
+                    <table class="cfTable" style="border: 1px solid rgb(255, 0, 0); border-image: none;">
+                        <colgroup>
+                            <col class="cfFieldLabel" style="width: 20%;">
+                            <col class="cfFieldInput" style="width: 45%;">
+                            <col class="cfFieldLabel" style="width: 9%;">
+                            <col class="cfFieldInput" style="width: 26%;">
+                        </colgroup>
+                        <tbody>
+                            <tr style="text-align:center;">
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255, 0, 0); text-align: center; color: rgb(255,0,0);">标 题：</td>
+                                <td class="cfFieldInput" rowspan="1" colspan="3" style="text-align:left;"><input type='text' style="width: 99%; height: 30px;" id="textTitle" /></td>
+                            </tr>
+                            <tr>
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255,0,0);text-align:center;color:rgb(255, 0, 0);">类 别：</td>
+                                <td class="cfFieldInput selected" style="border-width: 1px; border-color: rgb(255,0,0);"><input name="类别" class="cfText" id="BiaoTi1" style="width: 50%; height: 30px;" type="text" size="1" value=""><input name="类型" class="cfText" id="LeiXing" style="width: 1.61%; height: 30px;" type="hidden" size="1" value="预警预报响应"><input name="预警" class="cfText" id="warningID" style="width: 5.03%; height: 30px;" type="hidden" size="1"></td>
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255, 0, 0); text-align: center; color: rgb(255, 0, 0);">时 间：</td>
+                                <td class="cfFieldInput" style="border-width: 1px; border-color: rgb(255, 0, 0);"><input name="时间" class="cfText" id="ShiJian" style="width: 50%; height: 30px;" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255, 0, 0); text-align: center; color: rgb(255, 0, 0);">内 容：</td>
+                                <td class="cfFieldInput" style="border-width: 1px; border-color: rgb(255, 0, 0);" rowspan="1" colspan="3">
+                                    <textarea name="内容" class="cfLargeText" id="NeiRong" style="width: 99%; height: 87px;" rows="1"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255, 0, 0); text-align: center; color: rgb(255, 0, 0);">拟<br><br>办<br><br>意<br><br>见</td>
+                                <td class="cfFieldInput" style="border-width: 1px; border-color: rgb(255, 0, 0); height: 120px;" rowspan="1" colspan="3">
+                                    <textarea name="拟办意见" class="cfLargeText" id="NiBanYiJian" style="width: 99%; height: 120px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cfFieldLabel" style="border-width: 1px; border-color: rgb(255, 0, 0); text-align: center; color: rgb(255, 0, 0);">领<br><br>导<br><br>批<br><br>示</td>
+                                <td class="cfFieldInput" style="border-width: 1px; border-color: rgb(255, 0, 0); height: 200px;" rowspan="1" colspan="3">
+                                    <textarea name="领导批示" class="cfLargeText" id="LingDaoPiShi" style="width: 99%; height: 200px;"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script src="configMag.js"></script>
+    <script>
+        if (permissionStr == null) {
+            alert("当前状态已过期，请重新登录");
+            window.location.href = "./login.html";
+        }
+        var configMag = new _configMag();
+        configMag.init();
+        var common = new _common();
+    </script>
+</body>
+</html>

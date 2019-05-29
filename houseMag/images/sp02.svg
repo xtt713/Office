@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="42" height="42" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+<path d="M8 13L18 13L22 6L26 13L36 13L27 19L30 28L21 23L13 28L16 19Z" fill="red"/>
+
+</svg>

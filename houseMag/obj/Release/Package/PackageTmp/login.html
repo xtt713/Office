@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>登录页</title>
+    <link href="./Tools/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/login.css" rel="stylesheet" />
+    <script src="./Tools/js/jquery.min.js"></script>
+    <script src="./Tools/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
+    <style>
+        body {
+            background-image: url(./images/bgm.jpg);
+            overflow: hidden;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="main-content">
+            <div class="login-container">
+                        <div class="login-wrapper">
+                            <img class="china" src="./images/china2.png" />
+                            <h3 class="login-top">湖南省政府大院综合管理系统</h3>
+                            <div class="box">                             
+                                <h3>登录</h3>                               
+                                <div id="login-box" class="content-wrap">
+                                    <form action="index.html" method="post">
+                                        <fieldset>
+                                            <label class="block clearfix">
+                                                <span class="block input-icon input-icon-right">
+                                                    <input type="text" class="form-control" placeholder="用户名"
+                                                           id="txtUserName" name="txtUserName" />
+                                                    
+                                                </span>
+                                            </label>
+                                            <label class="block clearfix">
+                                                <span class="block input-icon input-icon-right">
+                                                    <input type="password" class="form-control" placeholder="密码"
+                                                           id="txtUserPwd" />
+                                                    
+                                                </span>
+                                            </label>
+                                            <div class="clearfix">
+                                                <label class="inline">
+                                                    <input id="Repassword" type="checkbox" class="ace" />
+                                                    <span class="lbl">记住密码</span>
+                                                </label>
+                                                <button type="button" class="width-35 pull-right btn btn-primary"
+                                                        id="btnUserLogin">
+                                                    登录
+                                                </button>
+
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <span style="color: Red">请使用chrome浏览器访问本平台！</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            if (window.history && window.history.pushState) {
+                $(window).on('popstate', function () {
+                    window.history.pushState('forward', null, '#');
+                    window.history.forward(1);
+                });
+            }
+            window.history.pushState('forward', null, '#'); //在IE中必须得有这两行
+            window.history.forward(1);
+            
+        })
+    </script>
+
+</body>
+</html>

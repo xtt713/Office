@@ -1,0 +1,237 @@
+﻿body{
+     /*background-image: url("../images/bgm.jpg");
+    background-size: 100% 100%;
+    color: #fff;*/
+     min-height: 100vh;
+}
+
+
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+
+select,option{
+    color: #333;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: top;
+    fill: currentColor;
+    overflow: hidden;
+}
+header{
+    height:7vh;
+    line-height:7vh;
+    font-size:23px;
+    font-weight: bold;
+    padding-left:20px;
+    border-bottom:1px solid #ccc;
+}
+.pa{
+    position: absolute;
+}
+.pr{
+    position:relative;
+}
+
+@media screen and (max-width: 1200px){
+    header{
+        height: 40px;
+        line-height:40px;
+    }
+}
+header > .btn {
+    margin: 1vh 10px 1vh 0;
+    height: 5vh;
+    line-height: 5vh;
+    padding: 0 13px;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+}
+@media screen and (max-width: 1200px){
+    header > .btn {
+        margin: 2px 20px 2px 0;
+        height:36px;
+        line-height: 35px;
+    }
+}
+ul{
+    list-style: none;
+}
+@media screen and (min-width: 1200px){
+    main{
+        width: 100%;
+        height: 93vh;
+        padding-bottom: 1px;
+    }
+}
+
+
+.content{
+    display: none;
+    position:relative;
+}
+.gov-div button{
+    display: none;
+    float: right;
+    margin-top: 3vh;
+    margin-right: 2.8vw;
+    background-color: #337ab7;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nature,.nature1 {
+    width: 180px;
+    height: 180px;
+    line-height: 159px;
+    /*padding-right: 13px;*/
+    border-radius:50%;
+    
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+}
+.nature{
+    background: url(../images/img0.png) 50% no-repeat;
+}
+.nature1{
+    background: url(../images/imgeryuan.png) 50% no-repeat;
+}
+.nature li:nth-child(n+6),.nature1  li:nth-child(n+6){
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    /*padding-right: 13px;*/
+    border-radius:50%;
+
+}
+.nature  ul,.nature1  ul{
+    position: relative;
+    top: 22px;
+    left: 13px;
+    text-align: center;
+}
+.nature .radius,.nature1 .radius{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    line-height: 150px;
+    text-align: center;
+    color: #FFF;
+    border-radius:50%;
+    -o-transition:-o-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -o-transform:none;
+    -ms-transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.nature li:nth-child(n+6) .radius,.nature1 li:nth-child(n+6) .radius{
+    width: 90px;
+    height: 90px;
+    line-height: 100px;
+    text-align: center;   
+}
+.nature li:nth-child(3) .radius,.nature1 li:nth-child(1) .radius{
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}
+.nature .pink,.nature1 .pink{
+    background-color: #D27DA1;
+}
+.nature .cyan,.nature1 .cyan{
+    background-color: #6CBEA6;
+}
+.nature .orange,.nature1 .orange{
+    background-color: #E4A63E;
+}
+.nature .purple,.nature1 .purple{
+    background-color: #A48EBB;
+}
+.nature .blue,.nature1 .blue{
+    background-color: #7AA8D9;
+}
+ul.reset, ul.reset li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+}
+ul.reset li {
+    position: absolute;
+}
+.remove{
+    display:none;
+}
+.table th{
+    text-align: center;
+}
+.table-bordered td{
+    text-align: center;
+}
+.red{
+    color: #fc695c;
+}
+.green{
+    color: #5ec063;
+}
+.gray{
+    color: #b39999;
+}
+.bg-orange{
+    background-color: #B18C48;
+}
+.bg-cyan{
+    background-color: #4D9D98;
+}
+.bg-red{
+    background-color:#935D7B;
+}
+.bg-darkblue{
+    background-color:rgb(35,58,121);
+
+}
+.bg-lightblue{
+    color: #fff;
+    background-color: #428bca;
+}
+.bg-purple{
+    background-color:#786D96;
+}
+.bg-gray{
+    background-color: #f2f2f2;
+}
+h1, .h1, h2, .h2, h3, .h3{
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+#Get_img>div img:hover,.swiper-slide img:hover,.build-img img:hover,#RoomImg img:hover{
+    transform: scale(1.2,1.2);
+}
+#Get_img>div img,.swiper-slide img,.build-img img,#RoomImg img{
+    transition: transform 1s;
+}
+input{
+    height: 38px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+input:focus{
+    outline: none;
+}
+.dn{
+    display: none;
+}

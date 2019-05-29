@@ -1,0 +1,91 @@
+﻿<div id="HouseMag">
+    <div class="data-list col-lg-12">
+        <div id="houseManage" class="room-manage">
+            <!-- 房间搜索 -->
+            <div id="searchGroup">
+                <select id="unitSelect"></select>
+                <select id="houseSelect"></select>
+                <input type="text" id="inputHouseName" placeholder="请输入楼房名称" />
+                <button id="searchHouseName" class="btn btn-success">搜索</button>
+            </div>
+            <table class="table table-bordered table-style">
+                <thead class="table-head" id="table_head">
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="100px">所在单位</th>
+                        <th width="100px">楼房名称</th>
+                        <th width="120px">开始时间</th>
+                        <th width="110px">竣工时间</th>
+                        <th width="80px">面积(平方米)</th>
+                        <th width="250px">介绍</th>
+                        <th width="200px">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="houseDetailData"></tbody>
+            </table>
+            <div class="paginationDiv" id="paginationDiv">
+                <div>
+                    <ul id="pagination" class="pagination" style="display: inline-block"></ul>
+                </div>
+                <div>
+                    共<span class="totalNum" id="totalNum"></span>页
+                    到第<input type="number" id="num" style="display: inline-block" />页<button id="getIndexData">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--编辑弹出框-->
+<div class="modals" id="modals">
+    <form class="col-lg-7">
+        <div class=" detail-msg-box">
+            <div id="detailMsg" class="detail-msg">
+                <div>
+                    <h4><span id="houseStatus">编辑</span><b class="red">(*为必填项)</b></h4>
+                    <img src="images/closeModal.png" width="30" height="30" />
+                </div>
+                <div class="room-message">
+                    <div class="row select-group" id="selectGroup">
+                        <label class="col-xs-12 col-lg-6">
+                            <span class="red width-8">*</span>单位:
+                            <select name="1" id="unit"></select>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>楼房名称:</label>
+                            <input type="text" id="houseName" class="col-xs-10 col-lg-6 required" maxlength="10" placeholder="请输入楼房名" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>面积(平方米):</label>
+                            <input type="text" id="area" class="col-xs-10 col-lg-6 required" value="0" placeholder="请输入面积" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>开始时间:</label>
+                            <input type="text" id="startTime" class="col-xs-10 col-lg-6 " data-date-format="yyyy-mm-dd" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>竣工时间:</label>
+                            <input type="text" id="completeTime" class="col-xs-10 col-lg-6 " data-date-format="yyyy-mm-dd" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12">
+                            <label class="col-xs-12 col-lg-12"><span class="width-8">&nbsp;</span>介绍:</label>
+                            <div class ="col-xs-10 col-lg-12 ">
+                                <textarea id="houseInfo" placeholder="请输入楼房介绍" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button class="btn btn-success" id="submitEditHouse">确定</button>
+                        <button class="btn btn-success" id="submitAddHouse" style="display:none">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

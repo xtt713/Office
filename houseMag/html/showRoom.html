@@ -1,0 +1,213 @@
+﻿<header>
+    <img src="images/gh.png" style="height: 30px;" /><span>湖南省政府大院公有房产综合管理系统</span>
+    <div class="button-group" id="button_group">
+        <ul id="houseButton">
+          
+        </ul>
+       
+        <div>
+            <button class="btn btn-danger" id="existLogin" onclick="common.clickEvent('1')"><i class="icon iconfont icon-zhuye"></i>主页</button>
+            <button id="gobackToMap" class="btn btn-success"><i class="icon iconfont icon-return"></i>返回</button>
+        </div>
+    </div>
+</header>
+<main id="main">
+    <div id="main_left" class="col-xs-12 col-sm-6 col-lg-3 main-left">
+        <div>
+
+            <div class="charts">
+                <div class="left-top">
+                    <div class="left-title">办公用房使用情况</div>
+                    <div id="office_pieChart" class="office-pieChart"></div>
+                </div>
+                <div class="left-bottom">
+                    <div class="left-title">办公人员职称分布</div>
+                    <div id="people_chart" class="people-chart"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main_center" class="col-xs-12 col-sm-12 col-lg-6 main-center">
+        <div class="choose-build">
+            <div id="RoomDetail" class="room-detail">
+                <!--<div class="gov-info" id="govInfo" style="background:rgba(98, 176, 243, 0.2)">
+                    <h3>湖南省政府详细信息</h3>
+                </div>-->
+
+
+
+                <div class="main-center-top"><div id="center_title"></div></div>
+                <div class="fr build-search">
+                    分区搜索:
+                    <label><select id="housesubSearch"></select></label>
+                    楼层搜索:
+                    <label><select id="floorSearch"></select></label>
+                    处室搜索:
+                    <label><select id="divisionSearch"></select></label>
+                </div>
+                <ul class="nav nav-pills nav-pills1">
+                    <li role="presentation" class="active"><a name="roomTable" href="#">办公室列表</a></li>
+                    <li role="presentation"><a name="buildingImgList" href="#">办公室图片</a></li>
+                </ul>
+                <div class="buildingImgList" id="buildingImgList">
+                    <!--<img class="col-lg-6" src="images/1.jpg" />
+                    <div class="col-lg-6">
+                        <p>办公室编号:南栋-205</p>
+                        <p>房内人员姓名：杨芳 曾庆虎 洪堃伟 陈卓懿	</p>
+                        <p>处室：杨芳 曾庆虎 洪堃伟 陈卓懿	</p>
+                        <p>使用面积：32.48m<sup>2</sup></p>
+                    </div>-->
+                </div>
+                <div class="room-table" id="roomTable">
+                    <div class="center-top">
+                        <div id="buildPersonData" class="build-person-data">
+                            <table class="table table-bordered table-style">
+                                <colgroup>
+                                    <col style="width: 60px;" />
+                                    <col />
+                                </colgroup>
+                                <thead class="table-head" id="table_head">
+                                    <tr>
+                                        <th style='width:50px;height:4.7vh;'>序号</th>
+                                        <th style='width:120px;height:4.7vh;'>办公室编号</th>
+                                        <th style='width:130px;height:4.7vh;'>姓名</th>
+                                        <th style='width:110px;height:4.7vh;'>处室</th>
+                                        <th style='width:80px;height:4.7vh;'>使用面积</th>
+                                        <th style='width:58px;height:4.7vh;'>状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="officeMsg"></tbody>
+
+                            </table>
+                        </div>
+
+                        <div class="paginationDiv">
+                            <ul id="pagination" class="pagination"></ul>
+                            <p>共<span class="totalNum"></span>页</p>
+                            <p>到第<input type="number" id="num" />页</p>
+                            <button id="getIndexData">确定</button>
+                        </div>
+                    </div>
+                    <div id="export_excel" class="fr" style="margin-top: 7px;">
+                        <button class="btn btn-success" data-toggle="modal" data-target="#myModal">导出</button>
+                    </div>
+                    <div class="center-bottom">
+                        <ul class="nav nav-pills nav-pills2">
+                            <li role="presentation" class="active"><a name="panorama" href="#">全景照片</a></li>
+                            <li role="presentation"><a name="RoomImg" href="#">照片</a></li>
+                        </ul>
+                        <div class="center-bottom-L office-center-L" id="roomMessage">
+                            <p id="panorama" class="panorama"></p>
+                            <p id="RoomImg" class="room_img"></p>
+                        </div>
+                        <div class="center-bottom-R" id="roomPeople">
+                            <table class="table table-bordered table-style">
+                                <thead class="table-head">
+                                    <tr id="Tr">
+                                        <th style="width:180px;">姓名</th>
+                                        <th style="width:180px;">职称</th>
+                                        <th style="width:285px;">处室</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="personData"></tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="main_right" class="col-xs-12 col-sm-6 col-lg-3 main-right">
+        <div>
+            <div class="user-manage">
+                <div class="search">
+                    <div class="left-title">姓名搜索</div>
+                    <div id="searchGroup" class="search-group">
+                        <input type='text' placeholder='请输入姓名' />
+                        <!--去除inline-block元素之间的间距
+                        -->
+                        <button class="btn-success" id="search"><img src="images/search.svg" />搜索</button>
+                    </div>
+                </div>
+                <div class="right-top">
+                    <div class="left-title">公有房产分布</div>
+                    <ul class="nav nav-pills nav-pills3">
+                        <li role="presentation" class="active"><a name="houseDistribute" href="#">办公用房</a></li>
+                        <li role="presentation"><a name="otherHouseDistribute" href="#">其他</a></li>
+                    </ul>
+                    <div class="tableClass">
+                        <table class="table table-bordered table-style" id="houseDistribute">
+                            <thead class="table-head">
+                                <tr>
+                                    <th>办公室类型</th>
+                                    <th>总房间数</th>
+                                    <th>已用房间数</th>
+                                </tr>
+                            </thead>
+                            <tbody id="roomTypeNum"></tbody>
+                        </table>
+                        <table class="table table-bordered table-style" id="otherHouseDistribute" style="display:none;">
+                            <thead class="table-head">
+                                <tr>
+                                    <th>房产类型</th>
+                                    <th>总房间数</th>
+                                    <th>已用房间数</th>
+                                </tr>
+                            </thead>
+                            <tbody id="otherRoomTypeNum"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="left-title">党政机关办公室面积标准</div>
+                    <div id="area_container" class="area-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--点击图片放大-->
+<div class="originImgDiv" id="originImgDiv">
+    <div class="getOriginalImg" id="getOriginalImg">
+        <img src="images/close.png" width="30" height="30" />
+        <div id="originalImg" class="originalImg">
+        </div>
+    </div>
+</div>
+<!--vr-->
+<div class="originImgDiv1" id="originImgDiv1">
+    <div class="getOriginalImg1" id="getOriginalImg1">
+        <img src="images/close.svg" width="30" height="30" />
+        <div id="originalImg1" class="originalImg1">
+        </div>
+    </div>
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">导出数据类型</h4>
+            </div>
+            <div class="modal-body t-center">
+                <label><input type="radio" name="generateExcelType" id="generate_division" value="0" checked="checked" />处室</label>
+                <label><input type="radio" name="generateExcelType" id="generate_room" value="1" />办公室</label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="generate_excel">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 导出表格 -->
+<table style="display: none;" id="exportTableData">
+    <thead id="exportHeadData">
+
+    </thead>
+    <tbody id="exportTbodyData"></tbody>
+</table>

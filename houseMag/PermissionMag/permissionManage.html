@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>湖南省政府大院公有房产综合管理系统权属管理</title>
+    <link rel="stylesheet" href="../tool/css/bootstrap.css">
+    <link rel="stylesheet" href="../tool/css/iconfont.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="permissionManage.css">
+    <script src="../tool/js/jquery.js"></script>
+    <script src="../tool/js/bootstrap.min.js"></script>
+    <script src="../tool/js/lazyLoad.js"></script>
+</head>
+<body>
+    <!--<header class="head-title">
+        湖南省政府大院公有房产综合管理系统配置管理
+    </header>-->
+    <div class="nav-main">
+        <div class="nav-box">
+            <div class="nav">
+                <ul class="nav-ul" id="buildingList1">
+                    <!--<li><a href="#" class="home" name="1">省政府机关院</a></li>
+        <li><a href="#" class="develop" name="2">省政府机关二院</a></li>-->
+                </ul>
+                <ul class="nav-ul" id="buildingList2"></ul>
+            </div>
+            <div class="nav-slide" id="nav_slide">
+                <div id="unit1HouseSub">
+
+                </div>
+                <div id="unit2HouseSub">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="g-list-box col-lg-12">
+                <button class="fr btn btn-danger" id="existLogin" onclick="commom.clickEvent('3')"><i class="icon iconfont icon-zhuye"></i>主页</button>
+                <div class="fr file-title" id="fileTitle"><span>省政府机关院一办公楼A座</span>详细信息</div>
+                
+                <ul class="nav" id="unitList">
+                    <li class="background-black" name="1"><i class="icon iconfont icon-qiyebangonglou"></i>省政府机关院</li><!--
+                    --><li name="2"><i class="icon iconfont icon-loufang101"></i>省政府机关二院</li>
+                </ul>
+                <div id="fileList" class="g-list">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--点击图片放大-->
+    <div class="originImgDiv" id="originImgDiv">
+        <div class="getOriginalImg" id="getOriginalImg">
+            <img src="../images/close.png" width="30" height="30" />
+            <div id="originalImg" class="originalImg">
+            </div>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script src="permissionManage.js"></script>
+    <script>
+        if (permissionStr == null) {
+            alert("当前状态已过期，请重新登录");
+            window.location.href = "./login.html";
+        }
+        var commom = new _common();
+        var permissionManage = new _permissionManage();
+        permissionManage.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\蔡敬祺\项目\houseMag发布</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/DBUtility.dll">
+      <publishTime>09/28/2018 18:45:08</publishTime>
+    </File>
+    <File Include="bin/houseMag.dll">
+      <publishTime>09/28/2018 18:45:09</publishTime>
+    </File>
+    <File Include="ConfigMag/configMag.css">
+      <publishTime>07/19/2018 09:22:39</publishTime>
+    </File>
+    <File Include="ConfigMag/configMag.html">
+      <publishTime>07/21/2018 11:29:05</publishTime>
+    </File>
+    <File Include="ConfigMag/configMag.js">
+      <publishTime>07/19/2018 09:22:39</publishTime>
+    </File>
+    <File Include="css/default.css">
+      <publishTime>07/19/2018 11:51:12</publishTime>
+    </File>
+    <File Include="css/default1200.css">
+      <publishTime>09/28/2018 18:24:16</publishTime>
+    </File>
+    <File Include="css/default320.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/default768.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>07/20/2018 14:44:58</publishTime>
+    </File>
+    <File Include="css/home.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/index.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/login.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/public.css">
+      <publishTime>09/20/2018 15:48:00</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>07/19/2018 08:41:58</publishTime>
+    </File>
+    <File Include="css/showRoom.css">
+      <publishTime>09/27/2018 13:57:57</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/28/2018 18:38:36</publishTime>
+    </File>
+    <File Include="font/iconfont.eot">
+      <publishTime>07/19/2018 09:23:16</publishTime>
+    </File>
+    <File Include="font/iconfont.svg">
+      <publishTime>07/19/2018 09:23:16</publishTime>
+    </File>
+    <File Include="font/iconfont.ttf">
+      <publishTime>07/19/2018 09:23:16</publishTime>
+    </File>
+    <File Include="font/iconfont.woff">
+      <publishTime>07/19/2018 09:23:16</publishTime>
+    </File>
+    <File Include="home.html">
+      <publishTime>07/28/2018 10:07:02</publishTime>
+    </File>
+    <File Include="html/homePage.html">
+      <publishTime>09/27/2018 13:57:19</publishTime>
+    </File>
+    <File Include="html/showRoom.html">
+      <publishTime>09/27/2018 13:57:19</publishTime>
+    </File>
+    <File Include="images/1.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/4.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/579eac0cb7195.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/bgm.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/B_Y.png">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/B_Z.png">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/cbl.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/cbr.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/china2.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/close.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/close.svg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/closeModal.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/ctl.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/ctr.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/C_D.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/C_X.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house1.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house2.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house3.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house4.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house5.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/house6.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/jifang1.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/wujingyingfang1.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/wuye.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/dalou/xinfangjiedaishi1.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/timg %282%29.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/unit20180323%282%29.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/unit20180323%283%29.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/unit20180323%284%29.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/unit5.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/danwei/unit6.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/delete.svg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/fangjian/1.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/20180423142759.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/4.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/bgm.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/biandianshi1.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/biandianshi2.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/biandianshi3.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/china2.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/fangjian4.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/gh.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img0.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img1.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img10.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img3.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img5.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/img6.png">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/jifang1.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/jifang2.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/jifang3.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/kongtiaojifang1.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/kongtiaojifang2.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/kongtiaojifang3.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room0.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room1.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room10.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room11.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room12.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room13.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room14.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room15.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room16.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room17.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room18.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room19.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room2.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room20.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room21.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room22.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room23.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room24.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room25.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room26.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room27.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room28.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room29.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room3.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room30.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room31.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room32.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room4.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room5.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room6.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room7.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room8.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian/room9.jpg">
+      <publishTime>07/19/2018 08:52:28</publishTime>
+    </File>
+    <File Include="images/fangjian4.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/fenqu/4.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/bgm.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB1.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB10.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB11.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB12.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB13.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB14.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB15.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB16.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB2.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB3.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB4.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB5.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB6.png">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB7.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB8.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB8.png">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/fenqu/houseSUB9.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/gh.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img0.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img1.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img10.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img11.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img2.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img3.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img4.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img5.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img6.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img7.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img8.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/img9.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/imgeryuan.png">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/loading.gif">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/NoImg.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/return.svg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/search.svg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/show_hidden.png">
+      <publishTime>07/18/2018 16:00:12</publishTime>
+    </File>
+    <File Include="images/timg.jpg">
+      <publishTime>07/19/2018 08:52:27</publishTime>
+    </File>
+    <File Include="images/unit2.png">
+      <publishTime>09/28/2018 17:27:05</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg1.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg2.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg3.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg4.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg5.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg6.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg7.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg8.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="images/wenjiantupian/buildImg9.jpg">
+      <publishTime>07/19/2018 08:52:25</publishTime>
+    </File>
+    <File Include="js/common.js">
+      <publishTime>07/21/2018 11:41:55</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/layer.js">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/mobile/layer.js">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/mobile/need/layer.css">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/icon-ext.png">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/icon.png">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/layer.css">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/loading-0.gif">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/loading-1.gif">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/layer/theme/default/loading-2.gif">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/test.html">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/文档/jquery下载.url">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/文档/layer官网.url">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/文档/layer文档.url">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/文档/layui社区.url">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/文档/获得layim.url">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/layer-v3.1.1/更新日志.txt">
+      <publishTime>07/21/2018 11:51:00</publishTime>
+    </File>
+    <File Include="js/login.js">
+      <publishTime>09/17/2018 10:34:07</publishTime>
+    </File>
+    <File Include="js/showRoom.js">
+      <publishTime>09/27/2018 15:11:10</publishTime>
+    </File>
+    <File Include="js/showUnit.js">
+      <publishTime>09/28/2018 18:33:43</publishTime>
+    </File>
+    <File Include="login.html">
+      <publishTime>07/19/2018 13:50:12</publishTime>
+    </File>
+    <File Include="MapJS/cxydrawM.js">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/cxygooglemap.js">
+      <publishTime>09/21/2018 17:05:33</publishTime>
+    </File>
+    <File Include="MapJS/cxy_drawEdit.js">
+      <publishTime>09/26/2018 10:53:13</publishTime>
+    </File>
+    <File Include="MapJS/cxy_drawFloor.js">
+      <publishTime>09/28/2018 18:36:27</publishTime>
+    </File>
+    <File Include="MapJS/cxy_drawRoom.js">
+      <publishTime>09/28/2018 17:48:20</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/cb_scout_sprite_api_003.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/google_white.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/imgs8.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/mapcontrols3d7.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/marker_sprite.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/openhand_8_8.bmp">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/gstatic/mapfiles/transparent.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/image/卫星.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/image/地图.png">
+      <publishTime>07/18/2018 15:05:25</publishTime>
+    </File>
+    <File Include="MapJS/mapapi3.15.5.js">
+      <publishTime>09/18/2018 17:37:26</publishTime>
+    </File>
+    <File Include="MapJS/MapDraw.js">
+      <publishTime>09/28/2018 09:05:50</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/common.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/controls.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/drawing.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/main.js">
+      <publishTime>09/17/2018 17:06:05</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/map.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/onion.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/overlay.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/stats.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/util.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/drawing.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/drawing_impl.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/geocoder.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/geometry.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/infowindow.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/kml.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/layers.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/marker.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/maxzoom.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/places_impl.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/poly.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/15/5/新建文件夹/usage.js">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/images/cb_scout2.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/images/google_white2.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/api-3/images/mapcnt3.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_002.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/cb_scout_sprite_api_003.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/closedhand_8_8.cur">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/css/default.css">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/drag_cross_67_16.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/drawing.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/google_white.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/iphone-dialog-bg.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/iphone-dialog-button.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/iw3.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/iws3.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/iw_close.gif">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/mapcontrols3d6.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/mapcontrols3d7.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/markers/marker_sprite.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/markers2/marker_sprite.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/mv/imgs8.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/openhand_8_8.cur">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/rotate.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/rotate2.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/szc3d.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/szc4.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/transparent.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/mapfiles/undo_poly.png">
+      <publishTime>09/17/2018 17:30:44</publishTime>
+    </File>
+    <File Include="MapJS/rapmin.js">
+      <publishTime>07/18/2018 15:29:14</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/Dispatch/Dispatch.html">
+      <publishTime>07/21/2018 10:18:33</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/Dispatch/HandlerDispatch.ashx">
+      <publishTime>07/21/2018 10:21:11</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/Dispatch/PRDispatch.js">
+      <publishTime>07/21/2018 10:18:33</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/HandlerData.ashx">
+      <publishTime>07/21/2018 10:25:35</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseMag/HandlerHouse.ashx">
+      <publishTime>07/21/2018 10:20:55</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseMag/HouseMag.html">
+      <publishTime>07/21/2018 10:18:40</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseMag/HouseMag.js">
+      <publishTime>07/21/2018 10:18:40</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseSubMag/HandlerHouseSub.ashx">
+      <publishTime>07/21/2018 10:20:40</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseSubMag/housesubMag.html">
+      <publishTime>07/21/2018 10:18:46</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/houseSubMag/housesubMag.js">
+      <publishTime>07/21/2018 10:18:46</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/PersonMag/HandlerPerson.ashx">
+      <publishTime>07/21/2018 10:20:26</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/PersonMag/PersonMag.html">
+      <publishTime>07/21/2018 13:59:45</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/PersonMag/personMag.js">
+      <publishTime>07/21/2018 10:18:51</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/PRoomMag.css">
+      <publishTime>07/21/2018 10:26:23</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/PRoomMag.js">
+      <publishTime>07/21/2018 10:26:23</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/RoomMag/HandlerRoom.ashx">
+      <publishTime>07/21/2018 10:20:15</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/RoomMag/RoomMag.html">
+      <publishTime>07/21/2018 10:18:58</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/RoomMag/RoomMag.js">
+      <publishTime>07/21/2018 10:18:58</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/unitMag/HandlerUnit.ashx">
+      <publishTime>07/21/2018 10:19:20</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/unitMag/unitMag.html">
+      <publishTime>07/21/2018 10:19:04</publishTime>
+    </File>
+    <File Include="OfficeRDisplay/unitMag/unitMag.js">
+      <publishTime>07/21/2018 10:19:04</publishTime>
+    </File>
+    <File Include="PermissionMag/HandlerPermission.ashx">
+      <publishTime>07/19/2018 09:45:42</publishTime>
+    </File>
+    <File Include="PermissionMag/permissionManage.css">
+      <publishTime>07/19/2018 09:24:34</publishTime>
+    </File>
+    <File Include="PermissionMag/permissionManage.html">
+      <publishTime>07/21/2018 11:28:41</publishTime>
+    </File>
+    <File Include="PermissionMag/permissionManage.js">
+      <publishTime>07/19/2018 09:24:34</publishTime>
+    </File>
+    <File Include="PRoomMag.html">
+      <publishTime>07/21/2018 11:52:03</publishTime>
+    </File>
+    <File Include="Svr/HandlerOffice.ashx">
+      <publishTime>07/19/2018 09:54:22</publishTime>
+    </File>
+    <File Include="Tools/css/bootstrap-datetimepicker.min.css">
+      <publishTime>07/21/2018 11:46:24</publishTime>
+    </File>
+    <File Include="Tools/css/bootstrap-select.css">
+      <publishTime>07/21/2018 11:46:45</publishTime>
+    </File>
+    <File Include="Tools/css/bootstrap.min.css">
+      <publishTime>07/18/2018 15:48:52</publishTime>
+    </File>
+    <File Include="Tools/css/iconfont.css">
+      <publishTime>07/19/2018 08:41:01</publishTime>
+    </File>
+    <File Include="Tools/css/jquery.orgchart.css">
+      <publishTime>07/21/2018 11:46:37</publishTime>
+    </File>
+    <File Include="Tools/css/sweet-alert.css">
+      <publishTime>07/21/2018 11:46:29</publishTime>
+    </File>
+    <File Include="Tools/js/ajaxfileupload.js">
+      <publishTime>07/21/2018 11:49:03</publishTime>
+    </File>
+    <File Include="Tools/js/bootstrap-datetimepicker.min.js">
+      <publishTime>07/21/2018 11:48:53</publishTime>
+    </File>
+    <File Include="Tools/js/bootstrap-datetimepicker.zh-CN.js">
+      <publishTime>07/21/2018 11:48:53</publishTime>
+    </File>
+    <File Include="Tools/js/bootstrap.min.js">
+      <publishTime>07/18/2018 15:48:31</publishTime>
+    </File>
+    <File Include="Tools/js/drilldown.js">
+      <publishTime>07/21/2018 15:47:58</publishTime>
+    </File>
+    <File Include="Tools/js/FSS.js">
+      <publishTime>07/21/2018 16:44:55</publishTime>
+    </File>
+    <File Include="Tools/js/highcharts.js">
+      <publishTime>07/24/2018 16:03:29</publishTime>
+    </File>
+    <File Include="Tools/js/jquery.min.js">
+      <publishTime>07/18/2018 15:24:37</publishTime>
+    </File>
+    <File Include="Tools/js/pagination.js">
+      <publishTime>07/21/2018 11:49:16</publishTime>
+    </File>
+    <File Include="Tools/js/photo-sphere-viewer.js">
+      <publishTime>07/21/2018 11:49:52</publishTime>
+    </File>
+    <File Include="Tools/js/raphael.js">
+      <publishTime>09/19/2018 10:11:03</publishTime>
+    </File>
+    <File Include="Tools/js/rapmin.js">
+      <publishTime>09/19/2018 10:11:03</publishTime>
+    </File>
+    <File Include="Tools/js/sweet-alert.js">
+      <publishTime>07/21/2018 11:49:33</publishTime>
+    </File>
+    <File Include="Tools/js/three.min.js">
+      <publishTime>07/21/2018 11:49:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/28/2018 18:45:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

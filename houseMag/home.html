@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>湖南省政府公有房产管理系统</title>
+    <link href="./Tools/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Tools/css/iconfont.css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/home.css" rel="stylesheet" />
+    <script src="./Tools/js/jquery.min.js"></script>
+    <script src="./Tools/js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+
+
+    <!--<link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./tool/js/jquery.js"></script>
+    <script src="./tool/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>-->
+    <style>
+        body {
+            background-image: url(./images/bgm.jpg);
+            background-size: 100% 200%;
+        }
+
+        .index-button5, index-button4, index-button3, index-button2, index-button1 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="head-title">
+        湖南省政府大院公有房产综合管理系统
+
+        <button class="fr btn btn-success index-button5" id="showPRoom"><i class="icon-cogs"></i>设置</button>
+        <button class="fr btn btn-danger" id="existLogin" onclick="common.clickEvent('2')"><i class="icon iconfont icon-iconfontguanji"></i>退出</button>
+    </header>
+    <div class="container-fluid index-page" id="indexPage">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4"></div>
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4 index-button">
+                <div class="bg-orange index-button1" name="officeDefault"><a href="./Default.aspx">办公用房展示</a></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4 index-button2" id="showPermissionManage">
+                <div class="bg-darkblue" name="permissionManage"><a href="./PermissionMag/permissionManage.html">权属管理</a></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4 index-button3" name="configMag" id="showDeployManage">
+                <div class="bg-purple"><a href="./configMag/configMag.html">配置管理</a></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-4 index-button4" name="fixMag" id="showRepairManage">
+                <div class="bg-cyan"><a>维修管理</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var common = new _common();
+        //获取用户名权限
+        var permissionStr = sessionStorage.getItem("permissionID");
+        //将权限字符串转变为数组
+        var permissionArr = permissionStr.split(',');
+        //var originArr = [1, 2, 3, 4, 5];
+        //var filterArr = [];
+        ////从原数组中把permissionArr剔除掉，然后再移除相对应的index-button
+        //for (let i = 0; i < originArr.length; i++) {
+        //    let a = 0;
+        //    for (let j = 0; j < permissionArr.length; j++) {
+        //        if (permissionArr[j] == originArr[i]) {
+        //            a++;
+        //        }
+        //    }
+        //    //如果permissionArr子元素在originArr子元素中，则a=1;不在，则a=0
+        //    if (a === 0) {
+        //        filterArr.push(originArr[i]);
+        //    }
+        //}
+        for (let i = 0; i < permissionArr.length; i++) {
+            $(".index-button" + permissionArr[i]).show();
+        }
+        $("#showPRoom").on('click', function () {
+            common.clickEvent('3', permissionStr)
+        })
+        $(".index-button").click(function (e) {
+
+        })
+    </script>
+</body>
+</html>

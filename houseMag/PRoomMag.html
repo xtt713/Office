@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>湖南省政府公有房产综合管理系统数据</title>
+
+
+    <link href="./Tools/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/public.css" rel="stylesheet" />
+
+    <link href="./OfficeRDisplay/PRoomMag.css" rel="stylesheet" />
+    <!-- 弹出框插件 -->
+    <link href="./Tools/css/sweet-alert.css" rel="stylesheet" />
+    <!-- 日历插件 -->
+    <link href="./Tools/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <button class="btn btn-warning add-room-data" id="addData" name="Unit">新增</button>
+        <!--<button class="btn btn-warning add-room-data" id="addPersonData" style="display:none">新增</button>-->
+        <button class="btn btn-danger exist-login" onclick="common.clickEvent('2')">退出</button>
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a name="unitManage" href="#">单位管理</a></li>
+            <li role="presentation"><a name="houseManage" href="#">楼房管理</a></li>
+            <li role="presentation"><a name="housesubManage" href="#">分区管理</a></li>
+            <li role="presentation"><a name="roomManage" href="#">房间管理</a></li>
+            <li role="presentation"><a name="personManage" href="#">人员管理</a></li>
+            <li role="presentation"><a name="personDispatch" href="#">人员调度</a></li>
+        </ul>
+        <!--房间/人员/调度列表2018-04-09SYF-->
+        <div id="RoomPersonMag">
+        </div>
+        <!--确认对话框-->
+        <div class="modal" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">人员管理</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submitBtn">保存</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--</div>-->
+
+    <script src="./Tools/js/jquery.min.js"></script>
+
+    <script src="./Tools/js/bootstrap.min.js"></script>
+    <script src="./Tools/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="./Tools/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="./Tools/js/ajaxfileupload.js"></script>
+    <script src="./Tools/js/pagination.js"></script>
+    <script src="./Tools/js/sweet-alert.js"></script>
+    <script src="./Tools/js/three.min.js"></script>
+    <script src="./Tools/js/photo-sphere-viewer.js"></script>
+
+
+
+
+    <script src="./js/layer-v3.1.1/layer/layer.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./OfficeRDisplay/RoomMag/RoomMag.js"></script>
+    <script src="./OfficeRDisplay/PersonMag/personMag.js"></script>
+    <script src="./OfficeRDisplay/Dispatch/PRDispatch.js"></script>
+    <script src="./OfficeRDisplay/PRoomMag.js"></script>
+    <script src="./OfficeRDisplay/houseMag/HouseMag.js"></script>
+    <script src="./OfficeRDisplay/houseSubMag/housesubMag.js"></script>
+    <script src="./OfficeRDisplay/unitMag/unitMag.js"></script>
+
+
+    <script>
+
+        var permissionID = sessionStorage.getItem("permissionID");
+        if (permissionID == null) {
+            alert("当前状态已过期，请重新登录");
+            window.location.href = "./login.html";
+        }
+        //加载html内容的全局变量2018-04-09SYF
+        var common = new _common();
+        var roomMag = new _roomMag();
+        var personMag = new _personMag();
+        var pRDispatch = new _PRDispatch();
+        var roomIDVariable = "";
+        var pRoomMag = new _pRoomMag();
+        var houseMag = new _houseMag();
+        var housesubMag = new _housesubMag();
+        var unitMag = new _unitMag();
+        pRoomMag.init();
+        var handlerID = sessionStorage.getItem("handlerID");
+
+    </script>
+</body>
+</html>

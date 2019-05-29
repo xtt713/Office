@@ -1,0 +1,150 @@
+﻿<div class="data-list col-lg-12">
+    <div id="roomManage" class="room-manage">
+        <!-- 房间搜索 -->
+        <div id="searchGroup">
+            <select id="unitSelect"></select>
+            <select id="houseSelect"></select>
+            <select id="housesubSelect"></select>
+            <select id="floorSelect"></select>
+            <input type="text" id="inputRoomName" placeholder="请输入房间名称"/>
+            <button id="searchRoomName" class="btn btn-success">搜索</button>
+        </div>
+        <table class="table table-bordered table-style">
+            <thead class="table-head" id="table_head">
+                <tr>
+                    <th width="60px">序号</th>
+                    <th width="100px">单位</th>
+                    <th width="100px">大楼名称</th>
+                    <th width="120px">楼房分区</th>
+                    <th width="110px">办公室编号</th>
+                    <th width="80px">房屋面积</th>
+                    <th width="370px">房间人员</th>
+                    <th width="130px">操作</th>
+                </tr>
+            </thead>
+            <tbody id="roomDetailData"></tbody>
+        </table>
+        <div class="paginationDiv" id="paginationDiv">
+            <div>
+                <ul id="pagination" class="pagination" style="display: inline-block"></ul>
+            </div>
+            <div>
+                共<span class="totalNum" id="totalNum"></span>页
+                到第<input type="number" id="num" style="display: inline-block" />页<button id="getIndexData">确定</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+<!--点击图片放大-->
+<div class="originImgDiv" id="originImgDiv">
+    <div class="getOriginalImg" id="getOriginalImg">
+        <img src="images/close.png" width="30" height="30" />
+        <div id="originalImg" class="originalImg">
+        </div>
+    </div>
+</div>
+<!-- 编辑弹出框 -->
+<div class="modals" id="modals">
+    <form class="col-lg-7">
+        <div class=" detail-msg-box">
+            <div id="detailMsg" class="detail-msg">
+                <div>
+                    <h4><span id="roomStatus">编辑</span><b class="red">(*为必填项)</b></h4>
+                    <img src="images/closeModal.png" width="30" height="30" />
+                </div>
+                <div class="room-message">
+
+                    <div class="row select-group" id="selectGroup">
+                        <label class="col-xs-12 col-lg-4">
+                            <span class="red width-8">*</span>单位:
+                            <select name="1" id="unit"></select>
+                        </label>
+                        <label class="col-xs-12 col-lg-3">
+                            <span class="red width-8">*</span>楼房:
+                            <select name="2" id="building"></select>
+                        </label>
+                        <label class="col-xs-12 col-lg-3">
+                            <span class="red width-8">*</span>分区:
+                            <select name="3" id="houseSub"></select>
+                        </label>
+                        <label class="col-xs-12 col-lg-2">
+                            <span class="red width-8">*</span>楼层:
+                            <select name="4" id="floor"></select>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-lg-6">
+                                <span class="red width-8">*</span>房间类型:
+                            </label>
+                            <select class="col-xs-10 col-lg-6" id="roomType">
+                                <option name="1" selected>办公室</option>
+                                <option name="2">服务用房</option>
+                                <option name="3">设备用房</option>
+                                <option name="4">附属用房</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-3"><span class="red width-8"></span>使用者:</label>
+                            <input type="text" id="users" class="col-xs-10 col-lg-9 " maxlength="30" placeholder="请输入使用人员" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>房间名:</label>
+                            <input type="text" id="roomName" class="col-xs-10 col-lg-6 required" maxlength="10" placeholder="请输入房间名" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>房屋面积(平方米):</label>
+                            <input type="text" id="standardArea" class="col-xs-10 col-lg-6 required" value="0" placeholder="请输入标准面积" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>房间长(米):</label>
+                            <input type="text" id="roomLength" class="col-xs-10 col-lg-6 " value="0" placeholder="请输入房间长度" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>房间宽(米):</label>
+                            <input type="text" id="roomWidth" class="col-xs-10 col-lg-6 " value="0" placeholder="请输入房间宽" />
+                        </div>
+                    </div>
+                    <div class="row" id="imgUpload">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>图片上传:</label>
+                            <label class="ui_button ui_button_primary" for="fuFileImg">上传文件</label>
+                            <input type='file' id='fuFileImg' name="fuFileImg" class="col-lg-6" multiple="multiple" accept=".jpg, .jpeg, .png" style="position:absolute;clip:rect(0 0 0 0);" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>全景图片上传:</label>
+                            <label class="ui_button ui_button_primary" for="panoramaImg">上传文件</label>
+                            <input type='file' id='panoramaImg' name="panoramaImg" class="col-lg-6" multiple="multiple" accept=".jpg, .jpeg, .png" style="position:absolute;clip:rect(0 0 0 0);" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6 theRoomImg" id="theRoomImg">
+
+                        </div>
+                        <div class="col-xs-12 col-lg-6 theRoomPano" id="theRoomPano">
+
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button class="btn btn-success" id="submitEditRoom">确定</button>
+                        <button class="btn btn-success" id="submitAddRoom" style="display:none">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--vr-->
+<div class="originImgDiv1" id="originImgDiv1">
+    <div class="getOriginalImg1" id="getOriginalImg1">
+        <img src="images/close.svg" width="30" height="30" />
+        <div id="originalImg1" class="originalImg1">
+        </div>
+    </div>
+</div>

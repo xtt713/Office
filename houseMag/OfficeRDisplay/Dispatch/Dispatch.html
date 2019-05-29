@@ -1,0 +1,97 @@
+﻿
+    <!-- <div id="Dispatch1" class="data-list col-lg-8" style="text-align: center; border: 1px solid #DDD;">-->
+    <!--人员调度房间列表2018-03-30 SYF-->
+    <div class="data-list col-lg-4" id="RoomShowList" style="border: 1px solid #DDD; ">
+        <h4 style="text-align: center;">房间列表</h4>
+        <div class="search">
+            <div id="searchPersonGroupLeft" class="search-group">
+                <input type='text' placeholder='请输入人名或房间编号' id="personSearchTextLeft" />
+                <!--去除inline-block元素之间的间距 -->
+                <button class="btn-success" id="searchPersonLeft"><img src="images/search.svg" />搜索</button>
+            </div>
+        </div>
+        <div id="roomDispatch">
+            <table class="table table-bordered table-style">
+                <thead class="table-head" id="table_head">
+                    <tr>
+                        <th>序号</th>
+                        <th>大楼名称</th>
+                        <th>楼房分区</th>
+                        <th>办公室编号</th>
+                        <!--<th>办公室ID</th>-->
+                    </tr>
+                </thead>
+                <tbody id="roomShowData"></tbody>
+            </table>
+            <div class="paginationDiv">
+                <div>
+                    <ul id="pageRDispatch" class="pagination" style="display: inline-block"></ul>
+                </div>
+                <div>
+                    共<span class="totalNum" id="totalNumRDispatch"></span>页
+                    到第<input type="number" id="numRoom" style="display: inline-block" />页<button id="getIndexDataDispatch">确定</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--人员调度人员列表 2018-03-30 SYF-->
+
+    <div class="data-list col-lg-4" id="PersonShowList" style="border: 1px solid #DDD; ">
+        <!--<h4 style="text-align: center;"><label id="labelRoomName"></label>房间人员列表</h4>-->
+        <h4 style="text-align: center;">房间人员列表</h4>
+        
+        <div id="personDispatch" class="room-manage">
+            <table class="table table-bordered table-style">
+                <thead class="table-head" id="table_head">
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>职位</th>
+                        <th>处室</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="PersonDispatchData"></tbody>
+            </table>
+            <div class="paginationDiv">
+                <div>
+                    <ul id="pageRDispatchSearch" class="pagination" style="display: inline-block"></ul>
+                </div>
+                <div>
+                    共<span class="totalNum" id="totalNumRDispatchSearch"></span>页
+                    到第<input type="number" id="numSearch" style="display: inline-block" />页<button id="getIndexDispatchSearch">确定</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--空置人员列表 2018-04-03-->
+    <div id="VacantRPList" class="data-list col-lg-4" style="border: 1px solid #DDD; ">
+        <h4 style="text-align: center;">空置人员列表</h4>
+        <table class="table table-bordered table-style">
+            <thead class="table-head" id="table_head">
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>处室</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="PersonVacantData"></tbody>
+        </table>
+
+        <div class="paginationDiv">
+            <div>
+                <ul id="pageVacant" class="pagination" style="display: inline-block"></ul>
+            </div>
+            <div>
+                共<span class="totalNum" id="totalNumVacant"></span>页
+                到第<input type="number" id="numVacant" style="display: inline-block" />页<button id="VacantIndexDispatch">确定</button>
+            </div>
+
+        </div>
+    </div>

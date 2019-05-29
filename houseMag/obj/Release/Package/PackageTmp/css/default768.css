@@ -1,0 +1,271 @@
+﻿body {
+    background-image: url("../images/bgm.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+ /*左侧*/
+.left-top{
+    margin-bottom: 25px;
+}
+.office-pieChart{
+    min-height: 345px;
+}
+.people-chart{
+    min-height: 345px;
+}
+.main-left{
+    width: 50%;
+}
+/*下部*/
+.main-center{
+    float: right;
+    width: 100%;
+}
+.center-title{
+    width:200px;
+    margin-top:10px;
+    padding-left:20px;
+    font-size:18px;
+    border-left: 5px solid #1aa9e0;
+    font-weight: bold;
+}
+.center-top{
+    margin-top:10px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.table{
+    margin-bottom:0;
+}
+.table-head{
+    background:#1aa9e0;
+}
+.table-head th{
+    text-align: center;
+}
+#officeMsg tr{
+    background:transparent;
+}
+
+#officeMsg tr:hover{
+    background:rgb(35,58,121);
+}
+.building-info{
+    height: 215px;
+    background-color: rgba(98, 176, 243, 0.6);
+    overflow: hidden;
+}
+.building-info p{
+    margin: 0;
+    padding: 15px;
+    line-height: 1.4;
+    font-size: 16px;
+    text-indent: 29px;
+}  
+.building-info1{
+    height: 157px;
+}
+/*轮播图开始*/
+ul{
+    list-style:none;
+}
+.slideShow{
+    margin: 0;
+    width: 100%;
+    height: 142px;     /*其实就是图片的高度*/
+    position: relative;
+    overflow: hidden;    /*此处需要将溢出框架的图片部分隐藏*/
+}
+.slideShow ul{
+    width: 500%;
+    padding: 0;
+    position: relative;     /*此处需注意relative : 对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，如果没有这个属性，图片将不可左右移动*/
+}
+.slideShow ul li{
+    float: left;     /*让四张图片左浮动，形成并排的横着布局，方便点击按钮时的左移动*/
+    width: 20%;
+    text-align: center;
+}
+.slideShow .showNav{     /*用绝对定位给数字按钮进行布局*/
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    text-align:center;
+    font-size: 12px;
+    line-height: 20px;
+}
+.slideShow .showNav span{
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #ff5a28;
+    margin-left: 2px;
+    color: #fff;
+}
+.slideShow .showNav .active{
+    background: #b63e1a;
+}  
+/*轮播图结束*/
+
+.center-bottom{ 
+    display:none;
+    margin-top:50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.center-bottom h4{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+    margin-left: 50px;
+
+}
+.center-bottom b{
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: inline-block;
+}
+.center-bottom-L{
+    display: inline-block;
+    width:44%;
+    border-radius:10px;
+    min-height:220px;
+    background: rgba(98, 176, 243, 0.6);
+}
+.center-bottom-R{
+    display: inline-block;
+    margin-left: 20px;
+    width:49%;
+    border-radius:10px;
+    min-height:220px;
+    vertical-align: top;
+    background: rgba(98, 176, 243, 0.6);
+}
+.center-bottom-R h4{
+    margin-bottom: 25px;
+}
+.return{
+    float: right;
+    margin-top: -40px;
+}
+/*右侧*/
+.weather{
+    border-radius:10px;
+    min-height:100px;
+    text-align: center;
+    background:rgba(98, 176, 243, 0.6);
+}
+#main .main-right{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 50%;
+}
+.right-top{
+    border-radius:10px;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(98, 176, 243, 0.6);
+}
+.right-top h3{
+    margin-left:30px;
+}
+.right-top p{
+    margin-left:120px;
+    font-size:16px;
+}
+.area-container{
+    height: 330px;
+}
+.right-bottom{
+    border-radius: 10px;
+}
+/*放大图片效果*/
+.originImgDiv{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(133,133,133,0.5);
+    z-index: 2;
+}
+.getOriginalImg{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 456px;
+    background-color: #bcd;
+    z-index: 3;
+}
+.borderBottom{
+    border-bottom: 1px solid #666;
+}
+.originalImg{
+    text-align: center;
+    padding-top: 25px;
+}
+.getOriginalImg h3{
+    display: inline-block;
+    margin: 0;
+    padding: 15px;
+}
+.getOriginalImg img[src='images/close.png']{
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+/*分页样式修改*/
+.paginationDiv{
+    text-align:right;
+}
+.pagination > li > a, .pagination > li > span{
+        color: #fff;
+        background-color: #428bca;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    color: #428bca;
+    background-color: #fff;
+    border-color: #428bca;
+}
+.pagination > li > a, .pagination > li > span{
+    margin-right: 10px;
+}
+.pagination{
+    margin: 0;
+    vertical-align: middle;
+}
+.paginationDiv{
+    margin-top: 0.5vh;
+    height: 5vh;
+}
+.paginationDiv p{
+    display: inline-block;
+}
+.paginationDiv p input{
+    width: 30px;
+    text-align: center;
+    color: #333;
+}
+.paginationDiv button{
+    padding: 6px 12px;
+    border: 0;
+    background-color: #428bca; 
+}
+
+/*.main-left>div,.main-center>div,.main-right>div{
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 90vh;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgb(17, 132, 167) 0px 0px 20px;
+}*/

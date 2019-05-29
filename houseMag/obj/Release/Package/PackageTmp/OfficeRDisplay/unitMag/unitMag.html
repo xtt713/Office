@@ -1,0 +1,95 @@
+﻿<div id="UnitMag">
+    <div class="data-list col-lg-12">
+        <div id="unitManage" class="room-manage">
+            <!-- 房间搜索 -->
+            <div id="searchGroup">
+                <select id="unitSelect"></select>
+                <input type="text" id="inputUnitName" placeholder="请输入单位名称" />
+                <button id="searchUnitName" class="btn btn-success">搜索</button>
+            </div>
+            <table class="table table-bordered table-style">
+                <thead class="table-head" id="table_head">
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="100px">名称</th>
+                        <th width="100px">地址</th>
+                        <th width="120px">总用地</th>
+                        <th width="110px">净用地</th>
+                        <th width="80px">面积(平方米)</th>
+                        <th width="80px">单位简称</th>
+                        <th width="250px">介绍</th>
+                        <th width="200px">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="unitDetailData"></tbody>
+            </table>
+            <div class="paginationDiv" id="paginationDiv">
+                <div>
+                    <ul id="pagination" class="pagination" style="display: inline-block"></ul>
+                </div>
+                <div>
+                    共<span class="totalNum" id="totalNum"></span>页
+                    到第<input type="number" id="num" style="display: inline-block" />页<button id="getIndexData">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--编辑弹出框-->
+<div class="modals" id="modals">
+    <form class="col-lg-7">
+        <div class=" detail-msg-box">
+            <div id="detailMsg" class="detail-msg">
+                <div>
+                    <h4><span id="unitStatus">编辑</span><b class="red">(*为必填项)</b></h4>
+                    <img src="images/closeModal.png" width="30" height="30" />
+                </div>
+                <div class="room-message">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>单位名称:</label>
+                            <input type="text" id="unitName" class="col-xs-10 col-lg-6 required" maxlength="10" placeholder="请输入单位名" />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>地址:</label>
+                            <input type="text" id="address" class="col-xs-10 col-lg-6 required" value="0" placeholder="请输入单位地址" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>总用地:</label>
+                            <input type="text" id="zlanduse" class="col-xs-10 col-lg-6 " />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="width-8">&nbsp;</span>净用地:</label>
+                            <input type="text" id="jlanduse" class="col-xs-10 col-lg-6 " />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>面积(平方米):</label>
+                            <input type="text" id="area" class="col-xs-10 col-lg-6 " />
+                        </div>
+                        <div class="col-xs-12 col-lg-6">
+                            <label class="col-xs-12 col-lg-6"><span class="red width-8">*</span>单位简称:</label>
+                            <input type="text" id="shortName" class="col-xs-10 col-lg-6 " placeholder="仅限2个字" maxlength="2"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12">
+                            <label class="col-xs-12 col-lg-12"><span class="red width-8">*</span>介绍:</label>
+                            <div class="col-xs-10 col-lg-12 ">
+                                <textarea id="unitInfo" placeholder="请输入单位介绍" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button class="btn btn-success" id="submitEditUnit">确定</button>
+                        <button class="btn btn-success" id="submitAddUnit" style="display:none">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

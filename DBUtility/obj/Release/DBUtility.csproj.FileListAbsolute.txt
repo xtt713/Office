@@ -1,0 +1,5 @@
+E:\蔡敬祺\项目\houseMag2018-9-25\DBUtility\bin\Release\DBUtility.dll
+E:\蔡敬祺\项目\houseMag2018-9-25\DBUtility\bin\Release\DBUtility.pdb
+E:\蔡敬祺\项目\houseMag2018-9-25\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+E:\蔡敬祺\项目\houseMag2018-9-25\DBUtility\obj\Release\DBUtility.dll
+E:\蔡敬祺\项目\houseMag2018-9-25\DBUtility\obj\Release\DBUtility.pdb
